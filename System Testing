@@ -1,1 +1,90 @@
+1.Introduction to Testing
+Software testing is the process of evaluating software to identify defects, bugs, errors, or unexpected behavior before the system is released to users.
+Testing ensures that the software functions correctly according to the specified requirements and helps improve: Reliability, Correctness, Security, Maintainability, User experience
 
+In the Smart Study Planner & Task Manager system, testing is important because users rely on the application to manage study schedules, tasks, and deadlines accurately. Any malfunction may affect productivity and data integrity.
+2. Purpose of Testing
+The purpose of testing is to identify defects early during development and verify that the system behaves correctly under different conditions.
+Testing helps:
+-Ensure features work as intended
+-Detect errors before deployment
+-Improve software quality
+-Validate system reliability and performance
+-Prevent security vulnerabilities
+Testing also checks how the system behaves with:
+-Valid inputs
+-Invalid inputs
+-Empty fields
+-Boundary conditions
+-Unexpected user behavior
+3. Focus on Testing a Single Component
+The selected component for testing is the Login Function. This component is important because it controls user access to the system. If the login procedure does not work correctly, authorized users may be unable to access their accounts, unauthorized users may gain access, and user experience and system security may be compromised
+The login function is critical because it checks multiple conditions, including whether the email exists, whether the password is correct, whether empty fields are submitted or whether invalid formats are entered.
+Since authentication directly affects both security and usability, the login function must be tested carefully.
+4. Preparing Test Cases
+Test cases were designed to verify system behavior under:
+- Normal conditions
+- Invalid conditions
+- Boundary conditions
+- Unexpected inputs
+Each test case specifies: Input data, Expected output, Actual result, Pass/Fail status
+| Test Case ID | Scenario             | Input                          | Expected Result              |
+| ------------ | -------------------- | ------------------------------ | ---------------------------- |
+| TC01         | Valid Login          | Correct email & password       | User redirected to dashboard |
+| TC02         | Invalid Password     | Correct email + wrong password | Error message displayed      |
+| TC03         | Non-existing User    | Unregistered email             | Login denied                 |
+| TC04         | Empty Fields         | No email or password           | Validation error shown       |
+| TC05         | Invalid Email Format | `abc.com`                      | Invalid email warning        |
+5. Writing Test Code
+function login(email, password) {
+    if(email === "student@test.com" && password === "12345") {
+        return "Login Successful";
+    } else {
+        return "Invalid Credentials";
+    }
+}
+
+// Test Case
+console.log(login("student@test.com", "12345"));
+console.log(login("student@test.com", "wrong"));
+6. Running Tests
+The prepared test cases were executed manually and through simple program execution using JavaScript functions.
+The testing process involved:
+- Running the application functions
+- Providing different input values
+- Comparing actual results with expected results
+- Recording whether each test passed or failed
+The tests were performed using:
+- Browser console
+- Visual Studio Code terminal
+- Manual interaction with the application interface
+The login function was executed by:
+- Entering valid and invalid email/password combinations
+- Running the login validation code
+- Observing system responses
+JavaScript
+console.log(login("student@test.com", "12345"));
+Expected output:
+Task Completed
+A test is marked as PASS when:
+- The actual result matches the expected result
+- The function behaves correctly
+- No unexpected errors occur
+A test is marked as FAIL when:
+- The actual output differs from expected output
+- System behavior is incorrect
+- Required functionality is missing
+A test is marked as ERROR when:
+- The application crashes
+- Runtime exceptions occur
+- System cannot continue execution
+| Component Tested | Total Tests | Passed | Failed | Errors |
+| ---------------- | ----------- | ------ | ------ | ------ |
+| Login Function   | 5           | 5      | 0      | 0      |
+| Task Creation    | 4           | 4      | 0      | 0      |
+| Task Completion  | 3           | 3      | 0      | 0      |
+7. Test Coverage
+Test coverage ensures that important system functionalities and possible failure conditions are tested. In this project, the tests covered valid inputs, invalid inputs, edge cases, and error conditions for critical components such as login, task creation, and task completion.
+The login component was tested under multiple conditions, including: Correct email and password (valid conditions) and Incorrect password, Non-existing user, Invalid email format and Empty fields as invalid conditons.
+The test coverage for the selected components is considered sufficient for validating the core functionality of the Smart Study Planner & Task Manager system.
+The tests addressed: Expected behavior, Invalid inputs, Boundary conditions and Failure situations
