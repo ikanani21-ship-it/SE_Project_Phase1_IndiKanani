@@ -1,0 +1,14 @@
+1. Software Architecture
+System Architecture
+The Smart Study Planner & Task Manager system follows a three-tier architecture, consisting of:
+-Frontend (User Interface)
+-Backend (Application Logic)
+-Database (Data Storage)
+These components work together to allow students to manage tasks, schedules, and progress efficiently.
+System Flow
+-Student (User) logs into the system using the Frontend (web interface).
+-The Frontend sends requests (e.g., login, add task, view schedule) to the Backend server.
+-The Backend processes the request, such as: Verifying user credentials in the database, Retrieving tasks assigned to the student, Saving new tasks or updates
+-The Database stores and retrieves data, including: User information (name, email, password), Study tasks (title, deadline, status), Scheduling data (planned study sessions)
+-The Backend sends the response back to the Frontend.
+-The Frontend displays updated information to the student in real time.
