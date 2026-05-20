@@ -1,0 +1,99 @@
+1. Chosen Development Model
+Model: Agile Development Model
+Justification: I chose the Agile model because it allows flexibility and continuous improvement during development. Since the Smart Study Planner may require changes based on user feedback (students’ needs), Agile is suitable for iterative development and quick updates,
+Agile also helps in:
+Dividing the project into small modules (tasks, scheduling, reminders) and frequent testing and improvements
+2. User Requirements
+a. Stakeholders 
+-Students (End Users)
+Primary users of the system
+Create tasks, set deadlines, and track study progress
+-Developers
+Responsible for designing, building, and maintaining the system and to ensure system functionality and performance
+b. User Stories 
+Student User Stories
+As a student, I want to create study tasks, so that I can organize my workload.
+As a student, I want to set deadlines for tasks, so that I don’t miss important submissions.
+As a student, I want to view my daily schedule, so that I can manage my time effectively.
+As a student, I want to mark tasks as completed, so that I can track my progress.
+Admin Management 
+As an admin, I want to manage user accounts, so that the system remains organized and secure.
+As an admin, I want to view system activity, so that I can monitor usage.
+3. Functional Requirements 
+a. Description
+The system must provide the following core functionalities: 
+-User registration and login
+-Task creation, editing, and deletion
+-Scheduling study plans
+-Deadline reminders
+-Task completion tracking
+b. Acceptance Criteria 
+User Login
+-User enters valid email and password
+-System verifies credentials
+-User is redirected to dashboard after successful login
+-Error message shown for invalid login
+Task Management
+-User can create a new task with title, description, and deadline
+-User can edit or delete tasks
+-Changes are saved and updated immediately in system
+Scheduling System
+-User can assign tasks to specific dates
+-Tasks appear in calendar or daily view
+-System correctly displays scheduled tasks
+Task Completion
+-User can mark tasks as completed
+-Completed tasks are visually separated from pending tasks
+4. Non-Functional Requirements 
+a. Description
+The system should be: fast and responsive, easy to use, reliable and secure and accessible on multiple devices (desktop/laptop/mobile browser)
+b. Acceptance Criteria
+-Performance
+Pages load in less than 2 seconds
+Task operations (add/edit/delete) complete in under 3 seconds
+-Usability
+Interface is simple and user-friendly
+New users can understand system within 5 minutes
+-Reliability
+System uptime should be 99% during usage
+No data loss during normal operations
+-Responsiveness
+Application works on mobile, tablet, and desktop screens
+UI adapts to different screen sizes properly
+5. Application Specifications
+a. Architecture
+The system follows a three-tier architecture:
+-Frontend: User interface (web pages for login, dashboard, tasks)
+-Backend: Handles logic such as task management, authentication, scheduling
+-Database: Stores user data, tasks, deadlines, and progress
+b. Database Model
+The system includes the following tables:
+-Users Table
+user_id (Primary Key)
+name
+email (Unique)
+password
+-Tasks Table
+task_id (Primary Key)
+user_id (Foreign Key)
+title
+description
+deadline
+status (Pending / Completed)
+-Relationships:
+One user can have many tasks
+Each task belongs to one user
+c. Technologies Used
+The system is developed using PHP for handling logic and system operations
+The frontend uses HTML, CSS, and JavaScript for building responsive and interactive UI.
+MySQL / Firebase is used as the database for storing structured user and task data.
+d. User Interface Design
+The interface includes a Login Page (user authentication), a Dashboard (overview of tasks and progress), a Task Management Page (add/edit/delete tasks) and a Calendar View.(optional)
+Design Principles:
+-Simple and clean layout
+-Easy navigation menu
+-Clear buttons for actions (Add Task, Edit, Delete)
+-Responsive design for all devices
+e. Security Measures
+The system uses user authentication using secure login system. Passwords are stored in encrypted form. Role-based access control ensures that only admins can manage
+system data. (user/admin separation if needed). Input validation to prevent invalid or malicious data. Secure session handling to protect user accounts
