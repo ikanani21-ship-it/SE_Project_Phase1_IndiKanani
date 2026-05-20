@@ -12,3 +12,9 @@ System Flow
 -The Database stores and retrieves data, including: User information (name, email, password), Study tasks (title, deadline, status), Scheduling data (planned study sessions)
 -The Backend sends the response back to the Frontend.
 -The Frontend displays updated information to the student in real time.
+Component Description
+-Student interacts with the system through the web interface and performs actions like login, task creation, and progress tracking
+Frontend (Web Application) : User interface built using HTML, CSS, JavaScript and Sends requests to backend and displays results, For example, when a student clicks “Add Task,” the frontend sends task information to the backend.
+Backend (Application Server): Handles business logic, Processes user requests, Communicates with database
+Database stores: User data, Tasks and Schedules. Users Database Role is to store user account information. it stores: User ID, Name, Email, Password (encrypted). Tasks Database Role is to store all study tasks created by students.
+It stores: Task title, Description, Deadline, Completion status, Linked user ID. Schedule Database Role is to store scheduling and calendar-related information. it stores Planned study sessions, Assigned dates and Schedule records
